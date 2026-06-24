@@ -1,29 +1,31 @@
+# 前置操作
+
 ## 初始化设置
 
-
-
 ```
-#保存用户名和密码
+#保存用户名和密码（避免重复输入）
 git config credential.helper store
 ```
 
+## 仓库操作
 
-
-## 创建仓库
-
-本地
+**创建本地仓库**
 
 ```
-C:\Users\86186>git init lzjabc
-Initialized empty Git repository in C:/Users/86186/lzjabc/.git/  
+git init lzjabc
 ```
 
-远程仓库
+本人电脑本地仓库地址：C:/Users/86186/lzjabc/.git/
+
+公司（myzr）本地仓库位置：D:\abc-git
+
+**远程仓库**
 
 ```
 git@github.com:lizhengjiang433/git-demo.git
-https://github.com/lizhengjiang433/git-demo
 ```
+
+远程仓库地址;https://github.com/lizhengjiang433/git-demo
 
 提交到暂存和本地仓库
 
@@ -90,6 +92,12 @@ ssh -T git@github.com
 
 ```
 git push origin main
+```
+
+拉取远程仓库文件
+
+```
+git pull origin main
 ```
 
 
@@ -172,9 +180,5 @@ alias graph="git log --oneline --graph"
 
 
 
-![image-20260621141747156](../../../Desktop/myzr-TE/git/git使用.assets/image-20260621141747156.png)生成SSH秘钥 
-
-```
-
-```
+![image-20260621141747156](../../../Desktop/myzr-TE/git/git使用.assets/image-20260621141747156.png)生成SSH
 
