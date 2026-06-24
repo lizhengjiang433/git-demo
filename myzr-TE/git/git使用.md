@@ -21,13 +21,68 @@ Initialized empty Git repository in C:/Users/86186/lzjabc/.git/
 远程仓库
 
 ```
-https://github.com/lizhengjiang433/git-demo.git
+git@github.com:lizhengjiang433/git-demo.git
 ```
 
 提交到暂存和本地仓库
 
 ```
 git commit -a -m ""
+```
+
+## 推送文件
+
+使用SSH拉取远程仓库
+
+
+
+配置SSH密钥
+
+```
+#回到用户根目录 C/User/MYZRcd 
+cd
+cd .ssh
+#ssh generate -t指定协议为rsa -b 指定生成大小为4096
+ssh-keygen -t rsa -b 4096
+```
+
+本地（myzr）生成的文件test（私钥文件），test.pub（公钥文件）
+
+![image-20260624094406761](git使用.assets/image-20260624094406761.png)
+
+匹配公钥（公钥太多了，得指定一个公钥）
+
+```
+notepad config
+#输入内容（指定使用公钥）
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/test
+#改配置文件后缀
+mv config.txt config
+```
+
+核对本地公钥是否和网页版一致
+
+```
+#本地密钥查看
+ssh-keygen -lf test.pub
+```
+
+
+
+```
+#查看配置文件的最后五行 
+tail -5 config
+```
+
+
+
+测试联通
+
+```
+ssh -T git@github.com
 ```
 
 
@@ -94,7 +149,7 @@ git merge dev
 code .
 ```
 
-![image-20260621130512299](git%E4%BD%BF%E7%94%A8.assets/image-20260621130512299.png)
+![image-20260621130512299](git使用.assets/image-20260621130512299-17822689754781.png)
 
 终止合并
 
@@ -110,11 +165,9 @@ alias graph="git log --oneline --graph"
 
 
 
-![image-20260621141747156](git%E4%BD%BF%E7%94%A8.assets/image-20260621141747156.png)生成SSH秘钥 
+![image-20260621141747156](git使用.assets/image-20260621141747156-17822689754792.png)生成SSH秘钥 
 
 ```
-cd .ssh
-ssh-keygen -t rsa -b 4096
 
 ```
 
