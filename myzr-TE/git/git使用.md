@@ -27,6 +27,8 @@ git@github.com:lizhengjiang433/git-demo.git
 
 远程仓库地址;https://github.com/lizhengjiang433/git-demo
 
+[b]
+
 提交到暂存和本地仓库
 
 ```
@@ -98,6 +100,24 @@ git push origin main
 
 ```
 git pull origin main
+```
+
+## 查看仓库大小
+
+```
+git count-objects -vH
+#输出
+count: 132
+#松散对象总大小，也就是当前未打包的版本历史占用空间
+size: 6.06 MiB
+in-pack: 0
+packs: 0
+#commit提交次数较少
+size-pack: 0 bytes
+prune-packable: 0
+garbage: 0
+size-garbage: 0 bytes
+
 ```
 
 
