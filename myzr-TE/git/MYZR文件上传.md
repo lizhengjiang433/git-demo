@@ -14,6 +14,10 @@ source venv/bin/activate
 sudo apt install xdg-utils
 ```
 
+md导出为rst
+
+
+
 ## 二、Sphinx 文档编译步骤
 
 1.文件准备
@@ -31,7 +35,7 @@ master_doc = 'myzr_TE'
 
 3.执行编译
 
-在项目文件夹里打开 CMD/PowerShell，运行：
+在这个目录空白处按住 `Shift` + 右键 → 选择「在此处打开命令窗口」运行：
 
 ```
 sphinx-build -b html . _build/html
@@ -55,5 +59,5 @@ xdg-open _build/html/index.html
 
 修改 `.rst` 文档内容后，无需重复环境准备步骤，仅需：
 
-1. 重新执行「二、3 执行编译命令」；
+1. 重新执行「二、3 执行编译命令」 ；
 2. 刷新浏览器中的网页，即可查看更新后的效果。

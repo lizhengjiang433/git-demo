@@ -1,15 +1,32 @@
-# 前置操作
+# 仓库相关
+
+---
+
+
 
 ## 初始化设置
 
 ```
-#保存用户名和密码（避免重复输入）
+#配置用户名
+git config --global user.name "Your Name"
+#配置邮箱
+git config --global user.email "mail@example.com"
+#存储配置
+git config --global credential.helper store
+```
+
+保存用户名和密码（避免重复输入）
+
+```
 git config credential.helper store
 ```
 
+
+
 ## 仓库操作
 
-**创建本地仓库**
+1. 创建本地仓库
+
 
 ```
 git init lzjabc
@@ -19,7 +36,7 @@ git init lzjabc
 
 公司（myzr）本地仓库位置：D:\abc-git
 
-**远程仓库**
+​	2. 远程仓库
 
 ```
 git@github.com:lizhengjiang433/git-demo.git
@@ -27,19 +44,9 @@ git@github.com:lizhengjiang433/git-demo.git
 
 远程仓库地址;https://github.com/lizhengjiang433/git-demo
 
-[b]
-
-提交到暂存和本地仓库
-
-```
-git commit -a -m ""
-```
-
 ## 推送文件
 
 使用SSH拉取远程仓库
-
-
 
 配置SSH密钥
 
@@ -75,31 +82,13 @@ mv config.txt config
 ssh-keygen -lf test.pub
 ```
 
-
-
-```
-#查看配置文件的最后五行 
-tail -5 config
-```
-
-
+> #查看配置文件的最后五行 
+> tail -5 config
 
 测试联通
 
 ```
 ssh -T git@github.com
-```
-
-推送文件至远程仓库
-
-```
-git push origin main
-```
-
-拉取远程仓库文件
-
-```
-git pull origin main
 ```
 
 ## 查看仓库大小
@@ -120,7 +109,42 @@ size-garbage: 0 bytes
 
 ```
 
+# 命令笔记
 
+## 提交相关
+
+1. 查看提交历史
+
+   ```
+   git log --oneline
+   ```
+
+2. 查看文件状态
+
+   ```
+   git status
+   ```
+
+ 3. 提交到暂存和本地仓库
+
+    ```
+    git commit -am""
+    ```
+
+
+ 4. 推送文件至远程仓库
+
+    ```
+    git push origin main
+    ```
+
+    > :warning:若在网页端更新过文件，那么在推送文件之前需要先拉取远程文件
+
+ 5. 拉取远程仓库文件
+
+    ```
+    git pull origin main
+    ```
 
 ## git diff 
 
