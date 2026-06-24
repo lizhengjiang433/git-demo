@@ -22,6 +22,7 @@ Initialized empty Git repository in C:/Users/86186/lzjabc/.git/
 
 ```
 git@github.com:lizhengjiang433/git-demo.git
+https://github.com/lizhengjiang433/git-demo
 ```
 
 提交到暂存和本地仓库
@@ -48,7 +49,7 @@ ssh-keygen -t rsa -b 4096
 
 本地（myzr）生成的文件test（私钥文件），test.pub（公钥文件）
 
-![image-20260624094406761](git使用.assets/image-20260624094406761.png)
+![image-20260624094406761](../../../Desktop/myzr-TE/git/git使用.assets/image-20260624094406761.png)
 
 匹配公钥（公钥太多了，得指定一个公钥）
 
@@ -83,6 +84,12 @@ tail -5 config
 
 ```
 ssh -T git@github.com
+```
+
+推送文件至远程仓库
+
+```
+git push origin main
 ```
 
 
@@ -149,7 +156,7 @@ git merge dev
 code .
 ```
 
-![image-20260621130512299](git使用.assets/image-20260621130512299-17822689754781.png)
+![image-20260621130512299](../../../Desktop/myzr-TE/git/git使用.assets/image-20260621130512299.png)
 
 终止合并
 
@@ -165,7 +172,7 @@ alias graph="git log --oneline --graph"
 
 
 
-![image-20260621141747156](git使用.assets/image-20260621141747156-17822689754792.png)生成SSH秘钥 
+![image-20260621141747156](../../../Desktop/myzr-TE/git/git使用.assets/image-20260621141747156.png)生成SSH秘钥 
 
 ```
 
