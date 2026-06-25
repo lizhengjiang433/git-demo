@@ -24,7 +24,7 @@ ctrl+ 加号或者减号
 
 2）按shift+enter 小换行
 
-3）Ctrl+Enter
+3）Ctrl+Enter（仅限在代码块中）
 
 4）Ctrl+] 增加缩进
 
