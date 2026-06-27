@@ -1,12 +1,21 @@
 http://127.0.0.1:8000
 
+myzr网页版资料git仓库上传位置：D:\my-work\git\myzr-docs
+
 ## 一、环境准备（Linux系统）
 
 1.激活虚拟环境（每次开关机都要执行）
 
 ```
+#家目录
 source venv/bin/activate
+# 退出虚拟环境
+deactivate
 ```
+
+> 两种环境 Sphinx 版本一致，功能无差异
+>
+> 全局 Python 和虚拟环境都装了相同版本 Sphinx，编译行为、输出效果完全一样，肉眼看不出区别。
 
 2.安装网页打开工具（按需安装，仅 Linux 环境需要）
 
@@ -14,7 +23,7 @@ source venv/bin/activate
 sudo apt install xdg-utils
 ```
 
-md导出为rst
+md导出为rst（转换器为pandc）
 
 
 
@@ -57,7 +66,34 @@ xdg-open _build/html/index.html
 
 ## 四、文档更新流程
 
-修改 `.rst` 文档内容后，无需重复环境准备步骤，仅需：
+修改 `.rst` 文档内容后：
 
-1. 重新执行「二、3 执行编译命令」 ；
+1. 清理旧构建产物再编译，避免缓存干扰
+
+   ```
+   rm -rf _build
+   ```
+
+2. 重新执行编译指令
+
+   ```
+   sphinx-build -b html . _build/html
+   ```
+
+   > `-b` = `--builder`，指定 Sphinx 构建器（输出格式）
+
 2. 刷新浏览器中的网页，即可查看更新后的效果。
+
+
+
+
+
+
+
+vscode安装扩展
+
+reStructuredText
+
+python环境
+
+![image-20260626150947276](MYZR文件上传.assets/image-20260626150947276.png)

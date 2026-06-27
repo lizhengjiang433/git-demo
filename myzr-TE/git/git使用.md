@@ -1,8 +1,8 @@
+工作相关文件（测试报告模板）：/c/Users/MYZR/myzr-TE
+
+
+
 # 仓库相关
-
----
-
-
 
 ## 初始化设置
 
@@ -128,7 +128,11 @@ size-garbage: 0 bytes
  3. 提交到暂存和本地仓库
 
     ```
-    git commit -am""
+    #-a 仅自动暂存已经发生修改的文件
+    git commit -am ""
+    #若从未提交过，则分两步
+    git add .
+    git commit -m ""
     ```
 
 
