@@ -7,7 +7,7 @@ myzr网页版资料git仓库上传位置：D:\my-work\git\myzr-docs
 1.激活虚拟环境（每次开关机都要执行）
 
 ```
-#家目录
+cd /mnt/d/my-work/myzr-docs
 source venv/bin/activate
 # 退出虚拟环境
 deactivate
