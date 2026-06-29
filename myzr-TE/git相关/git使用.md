@@ -142,12 +142,22 @@ size-garbage: 0 bytes
     ```
 
     > :warning:若在网页端更新过文件，那么在推送文件之前需要先拉取远程文件
+    >
+    > 推之前先拉取远程仓库，避免冲突
 
  5. 拉取远程仓库文件
 
     ```
     git pull origin main
     ```
+    
+    首次推送绑定分支
+    
+    ```
+    git push -u origin main
+    ```
+    
+    后续直接git push
 
 ## git diff 
 
