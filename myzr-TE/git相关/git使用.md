@@ -1,7 +1,5 @@
 # 仓库相关
 
----
-
 
 
 ## 初始化设置
@@ -48,6 +46,13 @@ git@github.com:lizhengjiang433/git-demo.git
 
 使用SSH拉取远程仓库
 
+```
+#查看当前远程地址类型
+git remote -v
+#切换成SSH远程地址
+git remote set-url origin git@github.com:lizhengjiang433/git-demo.git
+```
+
 配置SSH密钥
 
 ```
@@ -59,8 +64,6 @@ ssh-keygen -t rsa -b 4096
 ```
 
 本地（myzr）生成的文件test（私钥文件），test.pub（公钥文件）
-
-![image-20260624094406761](../../../Desktop/myzr-TE/git/git使用.assets/image-20260624094406761.png)
 
 匹配公钥（公钥太多了，得指定一个公钥）
 
