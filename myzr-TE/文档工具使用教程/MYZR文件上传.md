@@ -72,6 +72,8 @@ xdg-open _build/html/index.html
 
    ```
    rm -rf _build
+   #或者
+   sphinx-build -M clean . _build
    ```
 
 2. 重新执行编译指令
