@@ -131,7 +131,7 @@ size-garbage: 0 bytes
  3. 提交到暂存和本地仓库
 
     ```
-    git commit -am""
+    git commit -am q""
     ```
 
 
