@@ -10,14 +10,15 @@
 
 2. 增加映射
 
-   ```
    获取Github相关网站的ip
    访问https://www.ipaddress.com，拉下来，找到页面中下方的“IP Address Tools – Quick Links”
    分别输入github.global.ssl.fastly.net和github.com，查询ip地址
+   
+   ```
    下面是我的配置
    140.82.121.3	github.com
    146.75.121.194	github.global.ssl.fastly.net
    ```
-
+   
    
 
