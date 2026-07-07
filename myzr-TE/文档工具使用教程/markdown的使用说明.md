@@ -1,3 +1,27 @@
+进入/退出源码模式快捷键：Ctrl+/
+
+大纲显示：Ctrl+Shfit+1
+
+退出全屏：insert
+
+> Ctrl+Shfit+Q：竖杠
+>
+> 写入英文全称和中文解释
+
+插入表格：Ctrl+T 
+
+斜体：*Ctrl+I*
+
+下划线：<u>Ctrl+U</u>
+
+删除线：Alt+Shfit+5
+
+
+
+
+
+
+
 输入[TOC]可以自动导出目录
 
 [TOC]
