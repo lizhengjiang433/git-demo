@@ -16,7 +16,7 @@
    
    ```
    下面是我的配置
-   140.82.121.3	github.com
+   140.82.121.4	github.com
    146.75.121.194	github.global.ssl.fastly.net
    ```
    

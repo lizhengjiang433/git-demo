@@ -2,45 +2,9 @@
 
 
 
-## 初始化设置
-
-```
-#配置用户名
-git config --global user.name "Your Name"
-#配置邮箱
-git config --global user.email "mail@example.com"
-#存储配置
-git config --global credential.helper store
-```
-
-保存用户名和密码（避免重复输入）
-
-```
-git config credential.helper store
-```
 
 
 
-## 仓库操作
-
-1. 创建本地仓库
-
-
-```
-git init lzjabc
-```
-
-本人电脑本地仓库地址：C:/Users/86186/lzjabc/.git/
-
-公司（myzr）本地仓库位置：D:\abc-git
-
-​	2. 远程仓库
-
-```
-git@github.com:lizhengjiang433/git-demo.git
-```
-
-远程仓库地址;https://github.com/lizhengjiang433/git-demo
 
 ## 推送文件
 
@@ -247,14 +211,6 @@ git merge dev
 
 ```
 
-打开vscode
-
-```
-code .
-```
-
-![image-20260621130512299](../../../Desktop/myzr-TE/git/git使用.assets/image-20260621130512299.png)
-
 终止合并
 
 ```
@@ -273,7 +229,177 @@ alias graph="git log --oneline --graph"
 
 # 笔记
 
-## 远程仓库
+## 初始化设置
+
+```
+#配置用户名
+git config --global user.name "Your Name"
+#配置邮箱
+git config --global user.email "mail@example.com"
+#存储配置
+git config --global credential.helper store
+```
+
+保存用户名和密码（避免重复输入）
+
+```
+git config credential.helper store
+```
+
+## 创建仓库
+
+1. 创建本地仓库
+
+
+```
+git init lzjabc
+```
+
+本人电脑本地仓库地址：C:/Users/86186/lzjabc/.git/
+
+公司（myzr）本地仓库位置：D:\abc-git
+
+​	2. 远程仓库
+
+```
+git@github.com:lizhengjiang433/git-demo.git
+```
+
+远程仓库地址;https://github.com/lizhengjiang433/git-demo
+
+## 四个区域
+
+1. 工作区(working directory)
+
+   Windows盘符目录
+
+2. 暂存区(stage/index)
+
+   暂存区也叫索引，用来临时存放未提交的内容，一般在.git目录下的index中
+
+3. 本地仓库(repository)
+
+   git在本地的版本库，仓库信息存储在.git这个隐藏目录中
+
+4. 远程仓库(remote repository)
+
+   托管在远程服务器上的仓库。常用的有github、gitlab、gitee
+
+## 文件状态
+
+Modified：修改了但是没有保存到暂存区的文件
+
+staged：修改后已经保存到暂存区的文件
+
+commited：把暂存区的文件提交到本地仓库后的状态
+
+main/master：主分支
+
+## 特殊文件
+
+1. **.git**：Git仓库的元数据和对象数据库
+
+2. **.gitignore**：忽略文件，不需要提交到仓库的文件
+
+   ```
+   #校验文件是否被忽略
+   git check-ignore -v 1.txt
+   ```
+
+   > 将不需要的文件名字放在该文件中
+
+3. 
+
+4. 
+
+5. 
+
+6. 
+
+## 添加和提交
+
+添加一个文件到暂存区
+
+```
+git add <文件名>
+```
+
+添加所有暂存区的文件到本地仓库
+
+```
+git commit -m "message"
+```
+
+提交所有已修改的文件到本地仓库
+
+```
+git commit -am "message"
+```
+
+> 若有新建文件不会提交进去
+
+
+
+## 分支
+
+1. 查看所有本地分支，当前分支前面会有一个星号*
+
+   ```
+   git branch
+   ```
+
+   > -r查看远程分支，-a查看所有分支。
+
+2. 创建一个新的分支
+
+   ```
+   git branch <分支名>
+   ```
+
+3. 创建分支并切换到该分支下
+
+   ```
+   git checkout -b <分支名>
+   ```
+
+4. 删除一个已经合并的分支
+
+   ```
+   git branch -d <分支名>
+   ```
+
+   > 前提条件是分支所有的提交已经合并到main上
+
+5. 删除一个分支，不管是否合并
+
+   ```
+   git branch -D <f>
+   ```
+
+   
+
+6. 
+
+7. git merge --no-ff -m message <branch-name>
+
+   合并分支，--no-ff参数表示禁用Fast Forward模式，合并后的历史有分支，能看出曾经做过合并，而-ff参数表示使用FastForward模式，合并后的历史会变成一条直线。
+
+   - 将分支合并进main
+
+     ```
+     #切回主线
+     git checkout main
+     #拉取最新main
+     git pull origin main
+     #执行合并
+     git merge <分支名>
+     ```
+
+8. 
+
+9. gi
+
+
 
 1. 将本地和远程仓库进行关联
 
@@ -301,38 +427,6 @@ alias graph="git log --oneline --graph"
 
    
 
-## 四个区域
-
-1. 工作区(working directory)
-
-   Windows盘符目录
-
-2. 暂存区(stage/index)
-
-   暂存区也叫索引，用来临时存放未提交的内容，一般在.git目录下的index中
-
-3. 本地仓库(repository)
-
-   git在本地的版本库，仓库信息存储在.git这个隐藏目录中
-
-4. 远程仓库(remote repository)
-
-   托管在远程服务器上的仓库。常用的有github、gitlab、gitee
-
-## 文件修改存储状态
-
-1. 已修改(modfied)
-
-   修改了但是没有保存到暂存区的文件
-
-2. 已暂存(staged)
-
-   修改后已经保存到暂存区的文件
-
-3. 已提交(committed)
-
-   把暂存区的文件提交到本地仓库后的状态
-
 ## 分支与版本标记说明
 
 1. main/master：默认主分支
@@ -355,78 +449,7 @@ alias graph="git log --oneline --graph"
 
    往上数第4个版本
 
-## 特殊文件
-
-1. **.git**：Git仓库的元数据和对象数据库
-
-2. **.gitignore**：忽略文件，不需要提交到仓库的文件
-
-   ```
-   #校验文件是否被忽略
-   git check-ignore -v 1.txt
-   ```
-
-   > 将不需要的文件名字放在该文件中
-
-3. 
-
-4. 
-
-5. 
-
-6.  
-
-1. git add <file>
-
-   添加一个文件到暂存区
-
-## 分支
-
-1. git branch
-
-   查看所有本地分支，当前分支前面会有一个星号*，
-
-   > -r查看远程分支，-a查看所有分支。
-
-2. git branch <branch-name>
-
-   创建一个新的分支。
-
-3. git checkout -b <branch-name>
-
-   切换到指定分支，并更新工作区(自动创建了文件)。
-
-   ```
-   #创建分支并切换到该分支下
-   git checkout -b <分支名>
-   ```
-
-4. git branch -d <branch-name>
-
-   删除一个已经合并的分支。
-
-5. git checkout -D <branch-name>
-
-   删除一个分支，不管是否合并。
-
-6. 
-
-7. git merge --no-ff -m message <branch-name>
-
-   合并分支，--no-ff参数表示禁用Fast Forward模式，合并后的历史有分支，能看出曾经做过合并，而-ff参数表示使用FastForward模式，合并后的历史会变成一条直线。
-
-   - 将分支合并进main
-
-     ```
-     #切回主线
-     git checkout main
-     #拉取最新main
-     git pull origin main
-     #执行合并
-     git merge <分支名>
-     ```
-
-8. 
+1. 
 
 9. 
 
@@ -441,4 +464,32 @@ alias graph="git log --oneline --graph"
    git stash pop
    ```
 
+
+## 查看状态或差异
+
+1. 查看未暂存的文件更新了哪些部分
+
+   ```
+   git diff
+   ```
+
+   查看两个提交之间的差异
+
+   ```
+   git diff <commit-id> <commit-id>
+   ```
+
+2. 查看仓库状态，列出还未提交的或修改的文件
+
+   ```
+   git status
+   ```
+
+3. 查看提交历史，--oneline表示简洁模式
+
+   ```
+   git log --oneline
+   ```
+
    
+
