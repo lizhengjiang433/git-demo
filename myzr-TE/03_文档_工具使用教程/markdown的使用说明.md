@@ -2,7 +2,7 @@
 
 大纲显示：Ctrl+Shfit+1
 
-退出全屏：insert
+退出全屏：F11
 
 > Ctrl+Shfit+Q：竖杠
 >
