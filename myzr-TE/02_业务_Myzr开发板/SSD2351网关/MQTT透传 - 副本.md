@@ -80,7 +80,7 @@ MQTTX 的 Topic 框里填： emqx/my_gw/shsadl_645_req
 
 ```
 /etc/init.d/S99miot stop
-/etc/init.d/S99miot sta
+/etc/init.d/S99miot star
 ```
 
 ## 英文释义
