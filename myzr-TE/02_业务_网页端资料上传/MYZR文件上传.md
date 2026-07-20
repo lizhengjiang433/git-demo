@@ -107,3 +107,46 @@ reStructuredText
 python环境
 
 ![image-20260626150947276](MYZR文件上传.assets/image-20260626150947276.png)
+
+
+
+
+
+
+
+## pdf
+
+rst编译成pdf
+
+```
+#验证环境
+rst2pdf --version
+pandoc --version
+fc-list | grep "WenQuanYi Zen Hei"
+```
+
+```
+rst2pdf L51072-TM.测试手册.rst -o out.pdf --font-name "WenQuanYi Zen Hei"
+
+rst2pdf L51072-TM.测试手册.rst -o out.pdf
+```
+
+
+
+
+
+```
+#运行脚本
+bash "/mnt/c/Users/MYZR/Documents/Codex/2026-07-17/zm/outputs/rst-to-pdf.sh" "L51072-TM.测试手册.rst"
+
+bash "/mnt/c/Users/MYZR/Documents/Codex/2026-07-17/zm/outputs/rst-to-pdf.sh" "MYZR-SSD2351-EK112测试手册.rst"
+
+
+
+```
+
+```
+bash "/mnt/c/Users/MYZR/Documents/Codex/2026-07-17/zm/outputs/rst-to-pdf.sh" \
+  "RS485与MQTT透传示例.rst"
+```
+
