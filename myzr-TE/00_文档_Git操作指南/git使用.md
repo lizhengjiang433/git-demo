@@ -499,5 +499,55 @@ git restore
    git log --oneline
    ```
 
-   
+
+## stash
+
+```
+#把当前工作现场储藏起来，等以后恢复现场后继续工作
+git stash
+```
+
+```
+#恢复最近一次stash
+git stash pop
+#恢复第3个stash
+git stash pop stash@{2}
+```
+
+## 远程仓库
+
+```
+#添加远程仓库
+git remote add <name> <url>
+```
+
+```
+#查看远程仓库
+git remote -v
+#删除
+git remote rm <name>
+#重命名
+git remote rename <old-name> <new-name>
+```
+
+```
+#为了有一个干净的提交历史
+
+```
+
+
+
+## 英文释义
+
+|            英文             |      中文      |
+| :-------------------------: | :------------: |
+| URL=Uniform Resource Locato | 统一资源定位符 |
+|                             |                |
+|                             |                |
+|                             |                |
+|                             |                |
+|                             |                |
+|                             |                |
+|                             |                |
+|                             |                |
 
