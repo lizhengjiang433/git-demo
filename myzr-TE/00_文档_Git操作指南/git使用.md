@@ -532,7 +532,12 @@ git remote rename <old-name> <new-name>
 
 ```
 #为了有一个干净的提交历史
+git pull -rebase
+```
 
+```
+#c
+git branch -r
 ```
 
 
